@@ -8,18 +8,32 @@ body {
     margin: auto;
     display: grid;
     grid: min-content auto min-content / 2fr 1fr;
+    column-gap: 10px;
+    row-gap: 20px;
 }
 
 header {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 60% 10% 10%;
+    grid-template-areas: "header-title header-links . login-button";
 }
 
+.header-title{
+    display: grid;
+    grid-area: header-title;
+}
 
 .header-links {
     display: grid;
+    grid-area: header-links;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.switch-page {
+    display: grid;
+    grid-area: login-button;
+}
+
 
 header, footer {
     grid-column-start: 1;
@@ -30,12 +44,19 @@ header, footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content auto auto;
+    column-gap: 10px;
 }
 
 #articles-title, #articles-subtitle {
     grid-column-start: 1;
     grid-column-end: -1;
 }
+
+
+.login-header {
+    text-transform: uppercase;
+}
+
 
 
 
